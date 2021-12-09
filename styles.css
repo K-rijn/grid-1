@@ -1,1 +1,75 @@
 /*Maak hier jouw CSS!*/
+/*DIT IS DE MOBILE GRID*/
+.container {
+    background-color: #EFF1ED;
+    display: grid;
+    gap: 16px;
+    grid-auto-columns: 1fr;
+    grid-auto-rows: 50px auto 50px 50px 50px 50px;
+    grid-template-areas:
+       "mini-header"
+       "content-area"
+       "footer"
+       "image"
+       "header"
+       "dynamic"
+       "aside-1";
+
+
+}
+
+.grid-item {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+
+#mini-header {
+    grid-area: mini-header;
+    background-color: #373D20;
+}
+
+#content-area {
+    grid-area: content-area;
+    background-color: #766153;
+}
+
+#footer {
+    grid-area: footer;
+    background-color: #717744;
+}
+
+#image {
+    grid-area: image;
+    background-color: #BCBD8B;
+}
+
+#header {
+    grid-area: header;
+    background-color: #BCBD8B;
+
+}
+
+#aside-1 {
+    grid-area: aside-1;
+    background-color: #766153;
+}
+
+/*DIT IS DE DESKTOP GRID*/
+@media screen and (min-width: 576px) {
+    .container {
+        background-color: #EFF1ED;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 0.5fr 1fr 1fr 2.5fr 1fr;
+        gap: 16px 16px;
+        grid-template-areas:
+    "mini-header header header"
+    "content-area header header"
+    "content-area image aside-1"
+    "content-area image dynamic"
+    "footer footer footer";
+    }
+}
