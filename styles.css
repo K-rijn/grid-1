@@ -1,6 +1,6 @@
 /*Maak hier jouw CSS!*/
 /*DIT IS DE MOBILE GRID*/
-.container {
+.container-1 {
     background-color: #EFF1ED;
     display: grid;
     gap: 16px;
